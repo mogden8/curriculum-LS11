@@ -117,7 +117,7 @@ Route::post('/courses/{course}/loReorder', [CourseController::class, 'loReorder'
 Route::post('/courses/{course}/tlaReorder', [CourseController::class, 'tlaReorder'])->name('courses.tlaReorder');
 Route::get('/courses/{course}/pdf', [CourseController::class, 'pdf'])->name('courses.pdf');
 
-// Route for spreadsheet download in course 
+// Route for spreadsheet download in course
 Route::get('/courses/{course}/dataSpreadsheet', [CourseController::class, 'dataSpreadsheet'])->name('courses.dataSpreadsheet');
 
 Route::delete('/courses/{course}/pdf', [CourseController::class, 'deletePDF'])->name('courses.delete.pdf');
@@ -249,7 +249,7 @@ Auth::routes();
 // register backpack auth routes manually
 Route::middleware('web')->prefix(config('backpack.base.route_prefix'))->group(function () {
     Route::auth();
-    Route::get('logout', [Auth\LoginController::class, 'logout']);
+    Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
 });
 
 // account information page and update method
@@ -257,8 +257,8 @@ Route::middleware('web')->prefix(config('backpack.base.route_prefix'))->group(fu
 // Route::get('/accountInformation',[AccountInformationController::class, 'index'])->name('accountInformation');
 // Route::post('/accountInformation-update',[AccountInformationController::class, 'update'])->name('accountInformation.update');
 // *** These Routes work locally but not on staging ***
-Route::get('/accountInformation', [Auth\AccountInformationController::class, 'index'])->name('accountInformation');
-Route::post('/accountInformation-update', [Auth\AccountInformationController::class, 'update'])->name('accountInformation.update');
+Route::get('/accountInformation', [App\Http\Controllers\Auth\AccountInformationController::class, 'index'])->name('accountInformation');
+Route::post('/accountInformation-update', [App\Http\Controllers\Auth\AccountInformationController::class, 'update'])->name('accountInformation.update');
 
 Route::get('/clear-cache', function () {
     $exitCode = Artisan::call('config:cache');

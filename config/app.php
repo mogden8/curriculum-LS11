@@ -1,14 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
-use Illuminate\Support\ServiceProvider;
 
 return [
 
     'login_url' => env('LOGIN_URL'),
 
     'register_url' => env('REGI_URL'),
-
 
     'aliases' => Facade::defaultAliases()->merge([
         'PDF' => Barryvdh\DomPDF\Facade::class,

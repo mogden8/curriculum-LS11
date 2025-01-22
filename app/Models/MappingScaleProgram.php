@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,12 +14,12 @@ class MappingScaleProgram extends Model
 
     public $incrementing = false;
 
-    public function mappingScales()
+    public function mappingScales(): BelongsTo
     {
         return $this->belongsTo(MappingScale::class);
     }
 
-    public function programs()
+    public function programs(): BelongsTo
     {
         return $this->belongsTo(Program::class);
     }

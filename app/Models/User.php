@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -45,22 +46,22 @@ class User extends Authenticatable implements MustVerifyEmail
         ];
     }
 
-    public function roles()
+    public function roles(): BelongsToMany
     {
         return $this->belongsToMany(\App\Models\Role::class);
     }
 
-    public function courses()
+    public function courses(): BelongsToMany
     {
         return $this->belongsToMany(\App\Models\Course::class, 'course_users', 'user_id', 'course_id')->withPivot('permission');
     }
 
-    public function programs()
+    public function programs(): BelongsToMany
     {
         return $this->belongsToMany(\App\Models\Program::class, 'program_users', 'user_id', 'program_id')->withPivot('permission');
     }
 
-    public function syllabi()
+    public function syllabi(): BelongsToMany
     {
         return $this->belongsToMany(\App\Models\syllabus\Syllabus::class, 'syllabi_users', 'user_id', 'syllabus_id')->withPivot('permission');
     }

@@ -4008,10 +4008,8 @@ private function strategicPrioritiesSheet(Spreadsheet $spreadsheet, int $program
 }
 
 public function downloadUserGuide(){
-    Log::Debug("Made it to method");
-
-
-    $url = Storage::url('userguide'.DIRECTORY_SEPARATOR.'CMAP Data Download User Guide.docx');
+    
+    $url = Storage::url('userguide'.DIRECTORY_SEPARATOR.'Curriculum MAP Data Export Manual.docx');
 
     // return the location of the spreadsheet document on the server
     return $url;

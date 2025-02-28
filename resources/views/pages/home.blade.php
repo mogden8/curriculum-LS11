@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="alert alert-warning">
+        <!-- <i class="bi bi-info-circle-fill pr-2 fs-3"></i> -->
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <div>
+        The UBC Curriculum MAP tool will be unavailable on Thursday March 13th from 8:30AM-9:30AM for scheduled maintenance. Use of the tool during this time may result in lost data. Please contact <a href="ctl.helpdesk@ubc.ca">ctl.helpdesk@ubc.ca</a> with any questions.
+        </div>
+    </div>
 <!-- Browser Notification -->
 <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastPlacement" style="z-index: 11">
     <div id="browser-notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">

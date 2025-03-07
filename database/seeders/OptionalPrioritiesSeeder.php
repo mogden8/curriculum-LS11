@@ -47,7 +47,7 @@ class OptionalPrioritiesSeeder extends Seeder
         $osc->subcat_desc = "BC's tops skills in demand,as forecasted to the year 2032 by the <a href=\"https://www.workbc.ca/research-labour-market/bcs-labour-market-outlook-2022-edition\"></i> BC Labour Market Outlook (page 28)</a>
                                 , are the following:";
         $osc->subcat_postamble = 'Additionally, BC expects <a href="https://www.workbc.ca/Labour-Market-Industry/Jobs-in-Demand/High-Demand-Occupations.aspx"'
-                                .'target="_blank"><i class="bi bi-box-arrow-up-right"></i> these occupations to be of "High Opportunity"</a> in the province. 
+                                .'target="_blank"><i class="bi bi-box-arrow-up-right"></i> these occupations to be of "High Opportunity"</a> in the province.
                                 Does your course/program align with a High Opportunity Occupation in BC ?
                                 <select id="highOpportunity" class="highOpportunity"><option value="1">Yes</option> <option value="0">No</option></select>';
         $osc->save();
@@ -99,8 +99,8 @@ class OptionalPrioritiesSeeder extends Seeder
         $osc->subcat_id = 10;
         $osc->cat_id = 2;
         $osc->subcat_name = '<a href="https://equity.ubc.ca/about/inclusion-action-plan" target="_blank"><i class="bi bi-box-arrow-up-right"></i>
-                                        UBC’s Inclusion Action Plan</a>';
-        $osc->subcat_desc = 'The strategic plan defines inclusion as “a commitment to access, success, and representation of historically underserved, marginalized, or excluded populations”. To operationalize the inclusion theme of the strategic plan, UBC has developed an Inclusion Action Plan (IAP).';
+                                         UBC\'s Inclusion Action Plan</a>';
+        $osc->subcat_desc = 'The strategic plan defines inclusion as "a commitment to access, success, and representation of historically underserved, marginalized, or excluded populations". To operationalize the inclusion theme of the strategic plan, UBC has developed an Inclusion Action Plan (IAP).';
         $osc->subcat_postamble = '';
         $osc->save();
 
@@ -120,7 +120,7 @@ class OptionalPrioritiesSeeder extends Seeder
         $opp->op_id = 1;
         $opp->subcat_id = 1;
         $opp->optional_priority = 'Incorporation of the Declaration on the Rights of Indigenous Peoples Act and Calls to Action of the Truth and Reconciliation Commission
-                                <a href="http://trc.ca/assets/pdf/Calls_to_Action_English2.pdf" target="_blank">( <i class="bi bi-box-arrow-up-right"></i> More 
+                                <a href="http://trc.ca/assets/pdf/Calls_to_Action_English2.pdf" target="_blank">( <i class="bi bi-box-arrow-up-right"></i> More
                                 Information can be found here)</a>';
         $opp->year = 2020;
         $opp->save();
@@ -129,7 +129,7 @@ class OptionalPrioritiesSeeder extends Seeder
         $opp->op_id = 2;
         $opp->subcat_id = 1;
         $opp->optional_priority = "Align with CleanBC's plan to a protect our communities towards a more sustainable future
-                                <a href=\"https://cleanbc.gov.bc.ca/\" target=\"_blank\">( <i class=\"bi bi-box-arrow-up-right\"></i> 
+                                <a href=\"https://cleanbc.gov.bc.ca/\" target=\"_blank\">( <i class=\"bi bi-box-arrow-up-right\"></i>
                                 More Information can be found here)</a>";
         $opp->year = 2020;
 
@@ -167,7 +167,7 @@ class OptionalPrioritiesSeeder extends Seeder
         $opp->op_id = 7;
         $opp->subcat_id = 1;
         $opp->optional_priority = "Supporting students' awareness of career planning resources (such as the Labour Market Outlook)"
-                                .'<a href="https://www.workbc.ca/getmedia/18214b5d-b338-4bbd-80bf-b04e48a11386/BC_Labour_Market_Outlook_2019.pdf.aspx" 
+                                .'<a href="https://www.workbc.ca/getmedia/18214b5d-b338-4bbd-80bf-b04e48a11386/BC_Labour_Market_Outlook_2019.pdf.aspx"
                                 target="_blank">( <i class="bi bi-box-arrow-up-right"></i> More Information can be found here)</a>';
         $opp->year = 2020;
         $opp->save();
@@ -470,7 +470,7 @@ class OptionalPrioritiesSeeder extends Seeder
         $opp = new OptionalPriorities;
         $opp->op_id = 62;
         $opp->subcat_id = 7;
-        $opp->optional_priority = 'Objective 2: Expanded placements Help UBC’s health and health-related programs develop models that build placement capacity, as well as promote collaborative placements across British Columbia.';
+        $opp->optional_priority = 'Objective 2: Expanded placements Help UBC\'s health and health-related programs develop models that build placement capacity, as well as promote collaborative placements across British Columbia.';
         $opp->save();
 
         $opp = new OptionalPriorities;
@@ -562,7 +562,7 @@ class OptionalPrioritiesSeeder extends Seeder
         $opp = new OptionalPriorities;
         $opp->op_id = 75;
         $opp->subcat_id = 10;
-        $opp->optional_priority = 'Dialogue for Engagement: Facilitate and provide opportunities for dialogue and conversation around sensitive topics at UBC and beyond. Build conflict engagement skills and practices among all members of UBC’s community to equip people for working across differences.';
+        $opp->optional_priority = 'Dialogue for Engagement: Facilitate and provide opportunities for dialogue and conversation around sensitive topics at UBC and beyond. Build conflict engagement skills and practices among all members of UBC\'s community to equip people for working across differences.';
         $opp->save();
 
         $opp = new OptionalPriorities;
@@ -642,7 +642,7 @@ class OptionalPrioritiesSeeder extends Seeder
         $opp = new OptionalPriorities;
         $opp->op_id = 85;
         $opp->subcat_id = 2;
-        $opp->optional_priority = 'Social Perceptiveness: Being aware of others’
+        $opp->optional_priority = 'Social Perceptiveness: Being aware of others\'
         reactions and understanding why they react as they do.';
         $opp->year = 2022;
         $opp->op_subdesc = $op_subDesc->op_subdesc;
@@ -690,6 +690,57 @@ class OptionalPrioritiesSeeder extends Seeder
         tasks and people to work together effectively.';
         $opp->year = 2022;
         $opp->save();
+
+        // 2023 UBC Mandate
+        $opp = new OptionalPriorities;
+        $opp->op_id = 100;
+        $opp->subcat_id = 1;
+        $opp->optional_priority = 'Incorporation of the Declaration on the Rights of Indigenous Peoples Act and Calls to Action of the Truth and Reconciliation Commission <a href="http://trc.ca/assets/pdf/Calls_to_Action_English2.pdf" target="_blank" rel="noopener noreferrer">( <i class="bi bi-box-arrow-up-right"></i> More Information can be found here)</a>';
+        $opp->year = '2023';
+        $opp->save();
+
+        $opp = new OptionalPriorities;
+        $opp->op_id = 101;
+        $opp->subcat_id = 1;
+        $opp->optional_priority = "Align with CleanBC's plan to a protect our communities towards a more sustainable future<a href='https://cleanbc.gov.bc.ca/' target='_blank' rel='noopener noreferrer'>( <i class='bi bi-box-arrow-up-right'></i> More Information can be found here)</a>";
+        $opp->year = '2023';
+        $opp->save();
+
+        $opp = new OptionalPriorities;
+        $opp->op_id = 102;
+        $opp->subcat_id = 1;
+        $opp->optional_priority = 'Deliver education and training programming as described in the <a href="https://strongerbc.gov.bc.ca/jobs-and-training/" target="_blank" rel="noopener noreferrer">StongerBC Future Ready Action Plan</a> to equip British Columbians to capitalize on new opportunities and remain resilient in the face of unprecedented change, including the continued expansion of access to affordable, accessible and relevant training, such as through micro-credentials and expanded health seats.';
+        $opp->year = '2023';
+        $opp->save();
+
+        $opp = new OptionalPriorities;
+        $opp->op_id = 103;
+        $opp->subcat_id = 1;
+        $opp->optional_priority = 'Continue to provide culturally sensitive and safe learning environments for Indigenous learners to maximize their participation and success in post-secondary education.';
+        $opp->year = '2023';
+        $opp->save();
+
+        $opp = new OptionalPriorities;
+        $opp->op_id = 104;
+        $opp->subcat_id = 1;
+        $opp->optional_priority = 'Develop and implement protections for international students that support their fair treatment.';
+        $opp->year = '2023';
+        $opp->save();
+
+        $opp = new OptionalPriorities;
+        $opp->op_id = 105;
+        $opp->subcat_id = 1;
+        $opp->optional_priority = "Meeting or exceeding the financial targets identified in the <a href=\"https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/post-secondary-education-and-future-skills/service-plan\" target=\"_blank\" rel=\"noopener noreferrer\">Ministry's Service Plan</a> tabled under Budget 2023.";
+        $opp->year = '2023';
+        $opp->save();
+
+        $opp = new OptionalPriorities;
+        $opp->op_id = 106;
+        $opp->subcat_id = 1;
+        $opp->optional_priority = 'Complying with the <a href="https://www2.gov.bc.ca/gov/content/education-training/post-secondary-education/institution-resources-administration/tuition-limit-policy" target="_blank" rel="noopener noreferrer">Tuition Limit Policy</a>, which sets a two percent cap on tuition and mandatory fee increases for domestic students to ensure programs are affordable.';
+        $opp->year = '2023';
+        $opp->save();
+        // End 2023 UBC Mandate
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
     }

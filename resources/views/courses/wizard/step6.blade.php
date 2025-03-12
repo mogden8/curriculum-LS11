@@ -9,9 +9,9 @@
 <div>
     <div class="row justify-content-center">
         <div class="col-md-12">
-            
+
             @include('courses.wizard.header')
-            
+
             <div class="card">
                 <h3 class="card-header wizard" >
                     BC Degree Standards and Strategic Priorities
@@ -34,18 +34,18 @@
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-standards" role="tabpanel" aria-labelledby="nav-standards-tab">
-                            @if ($course->standard_category_id == 0) 
+                            @if ($course->standard_category_id == 0)
                                 <div class="alert alert-warning wizard">
-                                    <i class="bi bi-exclamation-circle-fill"></i>There are no ministry standards for this course to map to.                     
+                                    <i class="bi bi-exclamation-circle-fill"></i>There are no ministry standards for this course to map to.
                                 </div>
                             @else
 
                                 <div class="alert alert-primary d-flex align-items-center mt-3" role="alert" style="text-align:justify">
-                                    <i class="bi bi-info-circle-fill pr-2 fs-3"></i>                        
+                                    <i class="bi bi-info-circle-fill pr-2 fs-3"></i>
                                     <div>
-                                        In lieu of specific PLOs, the below are the <a class="alert-link" href="https://www2.gov.bc.ca/assets/gov/education/post-secondary-education/institution-resources-administration/degree-authorization/degree-program-criteria.pdf#page=19" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> standards provided by the Ministry of Post-Secondary Education and Future Skills</a>. Using the mapping scale provided, identify the alignment between this course against the ministry standards.                        
+                                        In lieu of specific PLOs, the below are the <a class="alert-link" href="https://www2.gov.bc.ca/assets/gov/education/post-secondary-education/institution-resources-administration/degree-authorization/bc_public_institution_quality_assessment_handbook.pdf#page=48" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> standards provided by the BC Ministry of Post-Secondary Education and Future Skills</a>. Using the mapping scale provided, identify the alignment between this course against the ministry standards for the degree level.
                                     </div>
-                                </div>                            
+                                </div>
 
                                 <!-- BC Degree Standards mapping scale -->
                                 <div class="container row">
@@ -74,7 +74,7 @@
                                             </table>
                                         @else
                                             <div class="alert alert-warning wizard">
-                                                <i class="bi bi-exclamation-circle-fill"></i>There are no mapping scale levels set for this program.                   
+                                                <i class="bi bi-exclamation-circle-fill"></i>There are no mapping scale levels set for this program.
                                             </div>
                                         @endif
                                     </div>
@@ -86,7 +86,7 @@
                                             <input type="hidden" name="course_id" value="{{$course->course_id}}">
                                             <div class="card border-white">
                                                 <div class="card-body">
-                                                        @if ($course->standardOutcomes->count() > 0) 
+                                                        @if ($course->standardOutcomes->count() > 0)
                                                             <table class="table table-bordered table-sm">
                                                                 <thead class="thead-light">
                                                                     <tr class="table-active">
@@ -111,7 +111,7 @@
                                                                             @foreach($course->standardScalesCategory->standardScales as $mappingScaleLevel)
                                                                                 <td>
                                                                                     <div class="form-check">
-                                                                                        @if (DB::table('standards_outcome_maps')->where('standard_id', $standard_outcome->standard_id)->where('course_id', $course->course_id)->where('standard_scale_id', $mappingScaleLevel->standard_scale_id)->exists()) 
+                                                                                        @if (DB::table('standards_outcome_maps')->where('standard_id', $standard_outcome->standard_id)->where('course_id', $course->course_id)->where('standard_scale_id', $mappingScaleLevel->standard_scale_id)->exists())
                                                                                             <input class="form-check-input position-static" type="radio" name="map[{{$course->course_id}}][{{$standard_outcome->standard_id}}]" value="{{$mappingScaleLevel->standard_scale_id}}" checked>
                                                                                         @else
                                                                                         <input class="form-check-input position-static" type="radio" name="map[{{$course->course_id}}][{{$standard_outcome->standard_id}}]" value="{{$mappingScaleLevel->standard_scale_id}}">
@@ -132,14 +132,14 @@
                                                                     @endforeach
                                                                 </tbody>
                                                             </table>
-                                                        @else 
+                                                        @else
                                                             <div class="alert alert-warning text-center">
-                                                                <i class="bi bi-exclamation-circle-fill pr-2 fs-5"></i>Program learning outcomes have not been set for this program                    
+                                                                <i class="bi bi-exclamation-circle-fill pr-2 fs-5"></i>Program learning outcomes have not been set for this program
                                                             </div>
                                                         @endif
-                                                    <button type="submit" class="btn btn-success my-3 btn-sm float-right col-2" >Save</button>  
-                                                </div>                                                                                           
-                                            </div>                                                                         
+                                                    <button type="submit" class="btn btn-success my-3 btn-sm float-right col-2" >Save</button>
+                                                </div>
+                                            </div>
                                         </form>
                                     </div>
                                 </div>
@@ -150,14 +150,14 @@
                             <!--Optional Priorities -->
                             <div class="card-body">
                                 <div class="alert alert-primary d-flex align-items-center" role="alert" style="text-align:justify">
-                                    <i class="bi bi-info-circle-fill pr-2 fs-3"></i>                        
+                                    <i class="bi bi-info-circle-fill pr-2 fs-3"></i>
                                     <div>
-                                        Select, from the below UBC and/or Ministry priorities and strategies, the items that align strongly with your course. This is <b>optional</b>.                                   
+                                        Select, from the below Ministry and UBC priorities and strategies, the items that align strongly with your course. This is <b>optional</b>.
                                     </div>
-                                </div>                            
+                                </div>
 
                                 <div class="jumbotron pt-4">
-                                    <h4 class="mb-4">Alignment with UBC/Ministry Priorities</h4>
+                                    <h4 class="mb-4">Alignment with Ministry and UBC Priorities</h4>
                                     <h6 class="card-subtitle wizard mb-4 text-primary fw-bold">Note: Remember to click save once you are done.</h6>
 
                                     <!--Accordions-->
@@ -191,7 +191,7 @@
                                                                                 @foreach ($optionalPrioritySubcategory->optionalPriorities->pluck('year')->unique()->sortDesc() as $year)
                                                                                     <option value="{{$year}}-mandate">{{$year}}</option>
                                                                                 @endforeach
-                                                                            </select>  
+                                                                            </select>
                                                                         </div>
 
                                                                         @foreach ($optionalPrioritySubcategory->optionalPriorities->pluck('year')->unique()->sortDesc() as $year)
@@ -208,7 +208,7 @@
                                                                                     </tr>
                                                                                 @endif
                                                                                 </thead>
-                                                                                <tbody> 
+                                                                                <tbody>
                                                                                     @foreach ($optionalPrioritySubcategory->optionalPriorities->where('year', $year) as $optionalPriority)
                                                                                         <!-- <tr>
                                                                                             <td>
@@ -261,9 +261,9 @@
                                                                                                 </td>
                                                                                             </tr>
                                                                                         @endif
-                                                                                    @endforeach                                                                                
+                                                                                    @endforeach
                                                                                 </tbody>
-                                                                            </table> 
+                                                                            </table>
                                                                         </div>
                                                                         @endforeach
                                                                     </div>
@@ -282,7 +282,7 @@
                                                                                     @foreach ($optionalPrioritySubcategory->optionalPriorities->pluck('year')->unique()->sortDesc() as $year)
                                                                                         <option value="{{$year}}-market">{{$year}}</option>
                                                                                     @endforeach
-                                                                                </select>  
+                                                                                </select>
                                                                             </div>
 
                                                                         @foreach ($optionalPrioritySubcategory->optionalPriorities->pluck('year')->unique()->sortDesc() as $year)
@@ -299,7 +299,7 @@
                                                                                     </tr>
                                                                                 @endif
                                                                                 </thead>
-                                                                                <tbody> 
+                                                                                <tbody>
                                                                                     @foreach ($optionalPrioritySubcategory->optionalPriorities->where('year', $year) as $optionalPriority)
                                                                                         <!-- <tr>
                                                                                             <td>
@@ -352,9 +352,9 @@
                                                                                                 </td>
                                                                                             </tr>
                                                                                         @endif
-                                                                                    @endforeach                                                                                
+                                                                                    @endforeach
                                                                                 </tbody>
-                                                                            </table> 
+                                                                            </table>
                                                                         </div>
                                                                         @endforeach
                                                                     </div>
@@ -482,27 +482,27 @@
         });
 
         $('#ubc-mandate').on('change', function (event) {
-            // get the value of the select 
+            // get the value of the select
             var mandateId = $(this).val();
             changeMandate(mandateId, mandateCollapseList);
-            
+
         })
         $('#ubc-market').on('change', function (event) {
-            // get the value of the select 
+            // get the value of the select
             var marketId = $(this).val();
             changeMarket(marketId, marketCollapseList);
-            
+
         })
     });
 
     function changeMandate(mandateId, mandateCollapseList) {
-        mandateCollapseList.each(function (index, mandateCollapse) {    
+        mandateCollapseList.each(function (index, mandateCollapse) {
             $(mandateCollapse).removeClass('show');
         });
         $('#' + mandateId).addClass('show');
     }
     function changeMarket(marketId, marketCollapseList) {
-        marketCollapseList.each(function (index, marketCollapse) {    
+        marketCollapseList.each(function (index, marketCollapse) {
             $(marketCollapse).removeClass('show');
         });
         $('#' + marketId).addClass('show');

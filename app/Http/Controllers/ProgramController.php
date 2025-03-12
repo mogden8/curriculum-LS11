@@ -3968,15 +3968,10 @@ class ProgramController extends Controller
             Log::error('Line - '.$exception->getLine());
             Log::error($exception->getMessage());
 
-            return $exception;
-        }
-    }
 
-    public function downloadUserGuide()
-    {
-        Log::Debug('Made it to method');
-
-        $url = Storage::url('userguide'.DIRECTORY_SEPARATOR.'CMAP Data Download User Guide.docx');
+public function downloadUserGuide(){
+    
+    $url = Storage::url('userguide'.DIRECTORY_SEPARATOR.'Curriculum MAP Data Export Manual.docx');
 
         // return the location of the spreadsheet document on the server
         return $url;
